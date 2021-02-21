@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Vote For Good</title>
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/votingPage.css" />
+    <link rel="stylesheet" href="./css/addElection.css">
+    <link rel="stylesheet" href="./css/timepicker.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> 
+  <script src="./node_modules/datepicker-bootstrap/js/core.js" type="text/javascript"></script> 
+  <script src="./node_modules/datepicker-bootstrap/js/datepicker.js"></script> 
+  <link href="./node_modules/datepicker-bootstrap/css/core.css" rel="stylesheet" type="text/css">
+  <link href="./node_modules/datepicker-bootstrap/css/datepicker.css" rel="stylesheet" type="text/css">
+  <script src="./js/timepicker.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="addElection.html">Add Election</a>
+      <a href="votingPage.html">Vote</a>
+      <a href="index.html">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <!-- Use any element to open the sidenav -->
+    <img class="nav-toggler" src="./img/threelines.png" alt="Open" />
+    <div id="main">
+      <div class="top-heading">
+        <h4>Enter election details</h4>
+      </div>
+      <!-- <form action="/" method="post"> -->
+     
+      <div class="add-election-details">
+          <label for="election-title">Title</label>
+          <input  id="election-title" class="form-control" type="text" placeholder="title of election.." >
+          <label for="election-description">Description</label>
+          <input id="election-description" class="form-control" type="text" placeholder="description of election.." >
+          <div class="container">
+            <div class="row">
+                <div class="col-xm-6">
+                  <label for="startdatepicker">Start date</label>
+                  <input id="startdatepicker" />
+          <script>
+              $('#startdatepicker').datepicker();
+          </script> 
+                </div>
+                <div class="col-xm-6">
+                    <label for="starttimepicker">Time</label>
+                    <input id="starttimepicker" class="form-control example" type="text" />
+                    <script>
+                        $(".example").timepicker();
+                    </script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xm-6">
+                  <label for="enddatepicker">End date</label>
+                  <input id="enddatepicker" />
+          <script>
+              $('#enddatepicker').datepicker();
+          </script> 
+                </div>
+                <div class="col-xm-6">
+                    <label for="endtimepicker">Time</label>
+                    <input id="endtimepicker" class="form-control example" type="text" />
+                    <script>
+                        $(".example").timepicker();
+                    </script>
+                </div>
+            </div>
+            
+            <div class="row">
+                <label for="course">Select Course:</label>
+                
+            </div>
+            <div class="row">
+                <div  id="course" class="form-check form-check-inline">
+                    <input class="form-check-input" name="COMP" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">COMP</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" name="IT" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">IT</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" name="MECH" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                    <label class="form-check-label" for="inlineCheckbox3">MECH</label>
+                  </div>
+            </div>
+            <div class="row">
+                <label for="course">Select Year:</label>
+                
+            </div>
+            <div class="row">
+                <div  id="course" class="form-check form-check-inline">
+                    <input class="form-check-input" name="FE" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">FE</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" name="SE" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">SE</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input"  name="TE"type="checkbox" id="inlineCheckbox3" value="option3" >
+                    <label class="form-check-label" for="inlineCheckbox3">TE</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" name="BE" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                    <label class="form-check-label" for="inlineCheckbox3">BE(disabled)</label>
+                  </div>
+            </div>
+          </div>
+          
+      </div>
+       <div class="add-election-btn">
+        <button  name="addElection" id="addElection" class="btn btn-primary" >ADD ELECTION</button>
+       </div>
+      <!-- </form> -->
+      
+          
+    </div>
+      
+
+    <script src="./js/index.js"></script>
+    <script src="./js/addElection.js"></script>
+  </body>
+</html>

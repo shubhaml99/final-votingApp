@@ -1,0 +1,23 @@
+h1{
+    text-align: center; 
+margin-top: 20px; 
+font-size: 30px;
+color: rgb(233, 20, 13); 
+}
+.form-row{
+    border: 2px solid rgb(30, 94, 235);
+    padding: 5px;
+}
+.gap-between-two-entry{
+    margin-top: 10px;
+}
+.space{
+    margin-top: 5px;
+}
+.container{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+}
+}

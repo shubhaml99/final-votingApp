@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vote For Good</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/loginregister.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      
+      <a href="addElection.html">Add Election</a>
+      <a href="votingPage.html">Vote</a>
+      <a href="addElection.html">Clients</a>
+      <a href="#">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <a href="admin.html">Admin</a>
+      <a href="Candidate_details.html"> Add Candidate details</a>
+    </div>
+
+    <!-- Use any element to open the sidenav -->
+    <img class="nav-toggler" src="./img/threelines.png" alt="Open" />
+    
+   
+    <div id="main">
+        <div id="container-login">
+            <div id="title">
+                <i class="material-icons lock";>lock</i> LOGIN
+            </div>
+    
+            <form>
+                <div class="input">
+                    <div class="input-addon">
+                        <i class="material-icons">face</i>
+                    </div>
+                    <input id="username" placeholder="Username" type="text" required class="validate" autocomplete="off">
+                </div>
+    
+                <div class="clearfix"></div>
+    
+                <div class="input">
+                    <div class="input-addon">
+                        <i class="material-icons">vpn_key</i>
+                    </div>
+                    <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
+                </div>
+    
+                <div class="remember-me">
+                    <input type="checkbox">
+                    <span style="color: #DDD">Remember Me</span>
+                </div>
+    
+                <input type="submit" value="Log In" />
+            </form>
+    
+            <div class="forgot-password">
+                <a href="#" style="color: #DDD">Forgot your password?</a>
+            </div>
+            <div class="privacy">
+                <a href="#" style="color: #DDD">Privacy Policy</a>
+            </div>
+    
+            <div class="register">
+                Don't have an account yet?
+                <a href="register.html"><button id="register-link" style="color: #DDD">Register here</button></a>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

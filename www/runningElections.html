@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vote For Good</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+ 
+
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      
+      <a href="addElection.html">Add Election</a>
+      <a href="votingPage.html">Vote</a>
+      <a href="addElection.html">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <!-- Use any element to open the sidenav -->
+    <img class="nav-toggler" src="./img/threelines.png" alt="Open" />
+    <div id="main">
+        <div class="top-heading">
+            <h4>Election Schedule</h4>
+            <h5>Vote For Change</h5>
+          </div>
+          <div class="nominee-table">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Starts</th>
+                    <th scope="col">Ends</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td id="title"></td>
+                    <td id="startDate"></td>
+                    <td id="endDate"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p id="test"></p>
+          </div>
+           
+    </div>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/runningElections.js"></script>
+  </body>
+</html>

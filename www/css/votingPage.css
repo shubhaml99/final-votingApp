@@ -1,0 +1,14 @@
+.top-heading{
+    text-align: center;
+}
+.nominee-img{
+    height: 3rem;
+    margin-left: 1rem;
+}
+
+.nominee-name {
+  margin: 1rem 2rem;
+}
+.nominee-post {
+    margin: 1rem 2rem;
+}
